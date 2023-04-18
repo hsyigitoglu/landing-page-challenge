@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --heading-font:"Poppins", sans-serif;
+    --body-font:"Open Sans", sans-serif;
+    /* colors */
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta:hsl(300,69%,71%);
+    --violet-o: rgba(103, 75, 175, .7);
+    --white: hsl(0, 0%, 100%);
+    --white-2: rgba(255, 255, 255, .8);
+
+    --box-shadow: .3rem 0.4rem .5rem .1rem rgb(0 0 0 / 20%);
+}
+body{
+    mix-blend-mode: multiply;
+    min-height: 100vh;
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background:url(images/bg-desktop.svg) no-repeat left;
+    background-size: contain;
+    z-index: -1;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.col-lg-6{
+    padding: 0;
+}
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--violet);
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+header{
+    position: absolute;
+    top: 80px;
+}
+.col-lg-6 .main-text{
+    padding: 50px 75px;
+}
+.col-lg-6 h1{
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+.col-lg-6:last-child p{
+    max-width: 460px;
+    color: var(--white-2);
+}
+.col-lg-6 .main-btn{
+    background-color: var(--white);
+    color: var(--violet);
+    font-family: var(--heading-font);
+    border-radius: 30px;
+    padding: 12px 60px;
+    margin-top: 10px;
+    box-shadow:var(--box-shadow);
+}
+.social-icons{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+}
+.social-icons i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding:20px;
+    font-size: 18px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    color: var(--white);
+    margin-right: 15px;
+    
+}
